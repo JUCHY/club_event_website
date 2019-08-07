@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { LinkContainer } from "react-router-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Routes from "./Routes";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App container">
+      <Navbar fixed="top" collapseOnSelect fluid="true" expand="lg" bg="dark" variant="dark">
+        <LinkContainer to="/">
+        <Navbar.Brand>{process.env.REACT_APP_TITLE}</Navbar.Brand>
+        </LinkContainer>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav >
+              <Nav.Item>
+              <LinkContainer to="/events">
+                <Nav.Link>Events</Nav.Link>
+              </LinkContainer>
+              </Nav.Item>
+              <LinkContainer to="/gallery">
+                <Nav.Link>Gallery</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/newsletter">
+                <Nav.Link>Newsletter</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/education">
+                <Nav.Link>Education</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/aboutus">
+                <Nav.Link>About Us</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/contactus">
+                <Nav.Link>Contact Us</Nav.Link>
+              </LinkContainer>
+            </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+        <Routes />
+      </div>
+    );
+  }
+  
 }
 
 export default App;

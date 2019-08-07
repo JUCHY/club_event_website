@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+
+}
+
+ul.events li{
+    padding: 5vh;
+}
+.events{
+    padding-top: 10vh
+}
