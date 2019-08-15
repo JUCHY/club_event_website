@@ -1,0 +1,24 @@
+.Gallery .lander {
+    padding: 200px 0;
+  }
+  
+  .Gallery .lander h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
+  
+  .Gallery .lander p {
+    color: #999;
+  }
+
+  .Gallery #instafeed{
+    display: grid;
+    padding: 10px;
+    grid-gap: 5vh;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: dense;
+  }
+
+  img{
+      height: 35vh;
+  }
