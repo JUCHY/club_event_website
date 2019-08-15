@@ -1,3 +1,16 @@
+# Club Event Website
+Club Event Website that uses connection to Instagram account as a method to update newsletter/feed
+
+### Progress
+- [x] Set up app and create Navbar
+- [x] Connect to an Instagram account using Instafeed
+- [ ] Format Instafeed homepage
+- [ ] Format Event Page
+- [ ] Format About Us/Contact Us Page
+- [ ] Format set up Gallery/Page (For Youtube videos and Club photos).
+- [ ] Deploy sample on netlify
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
